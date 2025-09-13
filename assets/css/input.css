@@ -1,0 +1,57 @@
+@config "../../tailwind.config.js";
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-Coming: "Coming Soon", cursive;
+  --font-bitcount: "Bitcount Prop Single", serif;
+  --color-tahiti: red;
+  --color-primary: #FFB400;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+/* এটি নিশ্চিত করবে যে dark-mode অন থাকলে
+সব .bg-white ক্লাস কালো হয়ে যাবে */
+
+body.dark-mode .bg-white {
+  background-color: #1a1a1a !important;
+}
+
+body.dark-mode .bg-white * {
+  color: #ffffff !important;
+}
+
+.responsive_navbar {
+  transition:  0.3s ease-in-out; 
+}
+
+.recommendations-carousel{
+  position: relative;
+}
+
+.recommendations-carousel .owl-dots{
+  display: flex !important;
+  justify-content: center;
+  margin-top: 30px;
+  gap: 10px !important;
+}
+
+.recommendations-carousel .owl-dots .owl-dot{
+  width: 10px !important;
+  height: 10px !important;
+  background-color: #FFB400!important;
+  border-radius: 100%;
+}
+
+.recommendations-carousel .owl-dots .owl-dot.active{
+  background-color: black !important;
+}
+
+.gllary-filter li.active{
+  color: #FFB400;
+}
